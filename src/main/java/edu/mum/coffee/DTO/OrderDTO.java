@@ -1,7 +1,5 @@
 package edu.mum.coffee.DTO;
 
-import edu.mum.coffee.domain.Orderline;
-
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;

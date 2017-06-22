@@ -1,7 +1,6 @@
 package edu.mum.coffee.domain;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
-import org.springframework.ui.Model;
 
 import javax.persistence.*;
 
@@ -9,7 +8,7 @@ import javax.persistence.*;
  * Created by prasannabajracharya on 6/21/17.
  */
 @Entity
-@Table(name = "authorities", uniqueConstraints = @UniqueConstraint(columnNames = { "authority", "user_id" }))
+@Table(name = "authorities", uniqueConstraints = @UniqueConstraint(columnNames = {"authority", "user_id"}))
 public class Authority {
 
     @Id
@@ -24,12 +23,13 @@ public class Authority {
     @Column(name = "authority", nullable = false, length = 45)
     private String authority;
 
-    public Authority(Person user,String authority){
+    public Authority(Person user, String authority) {
         this.person = user;
         this.authority = authority;
     }
 
-    public Authority(){}
+    public Authority() {
+    }
 
     public Person getPerson() {
         return person;

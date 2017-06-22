@@ -9,10 +9,8 @@ import edu.mum.coffee.service.OrderService;
 import edu.mum.coffee.service.PersonService;
 import edu.mum.coffee.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
-import javax.annotation.Resource;
 import java.util.List;
 
 /**
@@ -29,14 +27,14 @@ public class OrderController {
     private ProductService productService;
 
     @Autowired
-    public void OrderController(OrderService orderService, PersonService personService, ProductService productService){
+    public void OrderController(OrderService orderService, PersonService personService, ProductService productService) {
         this.orderService = orderService;
         this.personService = personService;
         this.productService = productService;
     }
 
     @PostMapping(value = "/create", consumes = "application/json")
-    public void create(@RequestBody OrderDTO orderDTO){
+    public void create(@RequestBody OrderDTO orderDTO) {
 
         Order order = new Order();
 
@@ -46,7 +44,7 @@ public class OrderController {
 
         order.setPerson(person);
 
-        if(orderDTO.getOrderLinesDTO() != null) {
+        if (orderDTO.getOrderLinesDTO() != null) {
             for (OrderLineDTO orderLineDTO : orderDTO.getOrderLinesDTO()) {
 
                 Orderline orderLine = new Orderline();
@@ -62,7 +60,7 @@ public class OrderController {
     }
 
     @GetMapping("/list")
-    public List<Order> findAll(){
+    public List<Order> findAll() {
         return orderService.findAll();
     }
 

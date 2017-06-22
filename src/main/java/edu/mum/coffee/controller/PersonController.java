@@ -4,12 +4,8 @@ import edu.mum.coffee.domain.Person;
 import edu.mum.coffee.service.PersonService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
-import javax.annotation.Resource;
-import javax.ws.rs.Path;
 import java.util.List;
 
 /**
@@ -23,27 +19,37 @@ public class PersonController {
     private PersonService personService;
 
     @PostMapping("/create")
-    public void create(@RequestBody Person person){
-         personService.savePerson(person);
+    public void create(@RequestBody Person person) {
+        personService.savePerson(person);
     }
 
     @RequestMapping(value = "/{id}", method = RequestMethod.GET)
-    public ResponseEntity findById(@PathVariable("id") long id){
+    public ResponseEntity findById(@PathVariable("id") long id) {
         try {
             Person person = personService.findById(id);
             return ResponseEntity.ok(person);
-        } catch(Exception e) {
+        } catch (Exception e) {
             return ResponseEntity.status(500).body(e.getMessage());
         }
     }
 
-    @RequestMapping(value="/find", method= RequestMethod.GET)
-    public List<Person> findByEmail(@RequestParam("email") String email){ // RequestParam is used because email doesnot work on path variable
-         return personService.findByEmail(email);
+    @GetMapping
+    public ResponseEntity findAllUsers() {
+        try {
+            List<Person> person = personService.findAll();
+            return ResponseEntity.ok(person);
+        } catch (Exception e) {
+            return ResponseEntity.status(500).body(e.getMessage());
+        }
+    }
+
+    @RequestMapping(value = "/find", method = RequestMethod.GET)
+    public List<Person> findByEmail(@RequestParam("email") String email) { // RequestParam is used because email doesnot work on path variable
+        return personService.findByEmail(email);
     }
 
     @RequestMapping(value = "/update", method = RequestMethod.PUT)
-    public void update(@RequestBody Person person){
-        personService.savePerson(person);
+    public void update(@RequestBody Person person) {
+        personService.updatePerson(person);
     }
 }

@@ -1,8 +1,5 @@
 package edu.mum.coffee.DTO;
 
-import edu.mum.coffee.domain.Order;
-import edu.mum.coffee.domain.Product;
-
 /**
  * Created by prasannabajracharya on 6/21/17.
  */

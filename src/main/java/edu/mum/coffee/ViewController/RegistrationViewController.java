@@ -8,8 +8,6 @@ import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.validation.Valid;
 import java.security.Principal;
@@ -24,13 +22,13 @@ public class RegistrationViewController {
     @Autowired
     PersonService personService;
 
-    public RegistrationViewController(PersonService personService){
+    public RegistrationViewController(PersonService personService) {
         this.personService = personService;
     }
 
     @PostMapping("/registerUser")
-    public String register(@Valid Person person, BindingResult result){
-        if(!result.hasErrors()){
+    public String register(@Valid Person person, BindingResult result) {
+        if (!result.hasErrors()) {
 
             personService.savePerson(person);
             return "redirect:/login";
@@ -39,7 +37,7 @@ public class RegistrationViewController {
     }
 
     @GetMapping("/profile")
-    public String viewProfile(Model model, Principal principal){
+    public String viewProfile(Model model, Principal principal) {
         List<Person> personList = personService.findByEmail(principal.getName());
         model.addAttribute("user", personList.get(0));
         return "profileDetails";

@@ -15,36 +15,36 @@ import javax.sql.DataSource;
 @EnableWebSecurity
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
-	@Resource
-	private DataSource dataSource;
+    @Resource
+    private DataSource dataSource;
 
-	@Override
+    @Override
     protected void configure(HttpSecurity http) throws Exception {
         http
-            .authorizeRequests()
-                .antMatchers("/", "/index", "/register", "/registerUser", "/productList").permitAll()
+                .authorizeRequests()
+                .antMatchers("/", "/index", "/register", "/registerUser", "/productList", "/rs/**").permitAll()
                 .anyRequest().authenticated()
                 .and()
 
-				.httpBasic()
-				.and()
-            .formLogin()
-				.loginPage("/login")
-            	.permitAll()
-            	.and()
-            .logout()
-            	.logoutRequestMatcher(new AntPathRequestMatcher("/logout"))
-            	.logoutSuccessUrl("/")
+                .httpBasic()
+                .and()
+                .formLogin()
+                .loginPage("/login")
                 .permitAll()
-		.and()
-		.csrf().disable();
+                .and()
+                .logout()
+                .logoutRequestMatcher(new AntPathRequestMatcher("/logout"))
+                .logoutSuccessUrl("/")
+                .permitAll()
+                .and()
+                .csrf().disable();
     }
 
-	@Autowired
-	public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
-		//auth.inMemoryAuthentication().withUser("super").password("pw").roles("ADMIN");
-		auth.jdbcAuthentication().dataSource(dataSource).usersByUsernameQuery("select email,password, enabled from users where email=?")
-				.authoritiesByUsernameQuery("select user_id, authority from authorities where user_id=(select id from users where email=?)");
-		;
-	}
+    @Autowired
+    public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
+        //auth.inMemoryAuthentication().withUser("super").password("pw").roles("ADMIN");
+        auth.jdbcAuthentication().dataSource(dataSource).usersByUsernameQuery("select email,password, enabled from users where email=?")
+                .authoritiesByUsernameQuery("select user_id, authority from authorities where user_id=(select id from users where email=?)");
+        ;
+    }
 }

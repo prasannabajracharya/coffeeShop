@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <title>Product List</title>
 
 </head>
@@ -18,15 +18,15 @@
         <th>QUANTITY</th>
     </tr>
 
-    <tr th:each="product : ${products}" >
+    <tr th:each="product : ${products}">
         <td th:text="${product.productName}">Onions</td>
         <td th:text="${product.price}">2.41</td>
         <td th:text="${product.description}">Good</td>
         <td>
             <form th:action="@{/orderNow}" method="post">
-            <input type = "number" name="quantity" />
-            <input type="hidden" th:value="${product.id}" name = "productId" />
-            <button type="submit"> Order Now </button>
+                <input type="number" name="quantity"/>
+                <input type="hidden" th:value="${product.id}" name="productId"/>
+                <button type="submit"> Order Now</button>
             </form>
         </td>
 
