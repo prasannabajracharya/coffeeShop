@@ -5,13 +5,18 @@ import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.validation.constraints.NotNull;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+@JsonIgnoreProperties(ignoreUnknown = true)
 @Entity
 public class Product {
 
 	@Id
 	@GeneratedValue
 	private int id;
+	@NotNull
 	private String productName;
 	private String description;
 	private double price;

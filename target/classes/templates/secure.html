@@ -13,7 +13,13 @@ xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 
     <h3> You are logged in as <span sec:authentication="principal.authorities">USER</span> </h3>
 
-    <div sec:authorize="hasAuthority('admin')">ADMIN</div>
+    <a href="#" th:href="@{/profile}" > My Profile </a>
+
+    <br />
+
+    <div sec:authorize="hasAuthority('user')">
+        ADMIN
+        </div>
 
     <a href="#" th:href="@{/logout}">logout</a>
 

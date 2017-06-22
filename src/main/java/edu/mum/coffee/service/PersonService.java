@@ -1,7 +1,9 @@
 package edu.mum.coffee.service;
 
+import java.util.Collections;
 import java.util.List;
 
+import edu.mum.coffee.domain.Authority;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -16,7 +18,13 @@ public class PersonService {
 	@Autowired
 	private PersonRepository personRepository;
 
+	//public Person savePerson(Person person) {
+//		return personRepository.save(person);
+//	}
+
 	public Person savePerson(Person person) {
+		Authority authority = new Authority(person,"USER");
+		person.setAuthorities(Collections.singletonList(authority));
 		return personRepository.save(person);
 	}
 

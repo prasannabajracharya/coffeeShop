@@ -2,24 +2,24 @@ package edu.mum.coffee.controller;
 
 import edu.mum.coffee.domain.Person;
 import edu.mum.coffee.service.PersonService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
+import javax.ws.rs.Path;
 import java.util.List;
 
 /**
  * Created by prasannabajracharya on 6/18/17.
  */
-@Controller
-@RequestMapping("/person")
+@RestController
+@RequestMapping("/rs/person")
 public class PersonController {
 
-    @Resource
+    @Autowired
     private PersonService personService;
 
     @PostMapping("/create")
@@ -28,8 +28,18 @@ public class PersonController {
     }
 
     @RequestMapping(value = "/{id}", method = RequestMethod.GET)
-    public Person findById(long id){
-        return personService.findById(id);
+    public ResponseEntity findById(@PathVariable("id") long id){
+        try {
+            Person person = personService.findById(id);
+            return ResponseEntity.ok(person);
+        } catch(Exception e) {
+            return ResponseEntity.status(500).body(e.getMessage());
+        }
+    }
+
+    @RequestMapping(value="/find", method= RequestMethod.GET)
+    public List<Person> findByEmail(@RequestParam("email") String email){ // RequestParam is used because email doesnot work on path variable
+         return personService.findByEmail(email);
     }
 
     @RequestMapping(value = "/update", method = RequestMethod.PUT)

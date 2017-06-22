@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+</head>
+<body>
+
+<div class="jumbotron">
+</div>
+<div class="container">
+    <div class="loginmodal-container">
+
+        <h1>Login</h1><br/>
+        <form method="post" action="/login" th:action="@{/login}">
+            <div>
+                <input type="text" placeholder="Email" class="form-control" name="username"/>
+            </div>
+            <div>
+                <input type="password" placeholder="Password" class="form-control" name="password"/>
+            </div>
+            <!-- <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}"/> -->
+            <div>
+                <button type="submit">Sign in</button>
+                <a href="#" th:href="@{/register}" >Register</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+</body>
+</html>

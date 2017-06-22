@@ -1,11 +1,8 @@
-<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
-
-<html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:th="http://www.thymeleaf.org">
-
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>Product List</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Product List</title>
 
 </head>
 
@@ -13,17 +10,17 @@
 
 <h1>Product list</h1>
 
-<table>
+<table th:border="1">
     <tr>
         <th>NAME</th>
         <th>PRICE</th>
         <th>DESCRIPTION</th>
     </tr>
 
-    <tr th:each="prod : ${productList}">
-        <td th:text="${prod.product_name}">Onions</td>
-        <td th:text="${prod.price}">2.41</td>
-        <td th:text="${prod.description}">Good</td>
+    <tr th:each="product : ${products}" >
+        <td th:text="${product.productName}">Onions</td>
+        <td th:text="${product.price}">2.41</td>
+        <td th:text="${product.description}">Good</td>
     </tr>
 </table>
 

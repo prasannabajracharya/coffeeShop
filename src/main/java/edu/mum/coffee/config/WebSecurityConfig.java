@@ -22,13 +22,14 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http
             .authorizeRequests()
-                .antMatchers("/", "/home", "/index").permitAll()
+                .antMatchers("/", "/index", "/register", "/registerUser").permitAll()
                 .anyRequest().authenticated()
                 .and()
 
 				.httpBasic()
 				.and()
             .formLogin()
+				.loginPage("/login")
             	.permitAll()
             	.and()
             .logout()
@@ -42,6 +43,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 	@Autowired
 	public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
 		//auth.inMemoryAuthentication().withUser("super").password("pw").roles("ADMIN");
-		auth.jdbcAuthentication().dataSource(dataSource);
+		auth.jdbcAuthentication().dataSource(dataSource).usersByUsernameQuery("select email,password, enabled from users where email=?")
+				.authoritiesByUsernameQuery("select user_id, authority from authorities where user_id=(select id from users where email=?)");
+		;
 	}
 }

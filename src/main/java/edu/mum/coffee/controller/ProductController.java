@@ -14,7 +14,7 @@ import java.util.List;
  * Created by prasannabajracharya on 6/17/17.
  */
 @RestController
-@RequestMapping("/product")
+@RequestMapping("/rs/product")
 public class ProductController {
 
     @Resource
