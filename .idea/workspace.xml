@@ -2,44 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="87ae1597-6d48-40f0-8151-f3f96084e582" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/edu/mum/coffee/config/WebSecurityConfig.class" afterPath="$PROJECT_DIR$/target/classes/edu/mum/coffee/config/WebSecurityConfig.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/edu/mum/coffee/controller/HomeController.class" afterPath="$PROJECT_DIR$/target/classes/edu/mum/coffee/controller/HomeController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/edu/mum/coffee/controller/OrderController.class" afterPath="$PROJECT_DIR$/target/classes/edu/mum/coffee/controller/OrderController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/edu/mum/coffee/controller/PersonController.class" afterPath="$PROJECT_DIR$/target/classes/edu/mum/coffee/controller/PersonController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/edu/mum/coffee/controller/ProductController.class" afterPath="$PROJECT_DIR$/target/classes/edu/mum/coffee/controller/ProductController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/edu/mum/coffee/domain/Order.class" afterPath="$PROJECT_DIR$/target/classes/edu/mum/coffee/domain/Order.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/edu/mum/coffee/domain/Orderline.class" afterPath="$PROJECT_DIR$/target/classes/edu/mum/coffee/domain/Orderline.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/edu/mum/coffee/domain/Person.class" afterPath="$PROJECT_DIR$/target/classes/edu/mum/coffee/domain/Person.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/edu/mum/coffee/domain/Product.class" afterPath="$PROJECT_DIR$/target/classes/edu/mum/coffee/domain/Product.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/edu/mum/coffee/service/OrderService.class" afterPath="$PROJECT_DIR$/target/classes/edu/mum/coffee/service/OrderService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/edu/mum/coffee/service/PersonService.class" afterPath="$PROJECT_DIR$/target/classes/edu/mum/coffee/service/PersonService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/edu/mum/coffee/service/ProductService.class" afterPath="$PROJECT_DIR$/target/classes/edu/mum/coffee/service/ProductService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/edu/mum/coffee/OrderServiceTest.class" afterPath="$PROJECT_DIR$/target/test-classes/edu/mum/coffee/OrderServiceTest.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/edu/mum/coffee/PersonServiceTest.class" afterPath="$PROJECT_DIR$/target/test-classes/edu/mum/coffee/PersonServiceTest.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/edu/mum/coffee/ProductServiceTest.class" afterPath="$PROJECT_DIR$/target/test-classes/edu/mum/coffee/ProductServiceTest.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.settings/org.eclipse.wst.common.project.facet.core.xml" afterPath="$PROJECT_DIR$/.settings/org.eclipse.wst.common.project.facet.core.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/mum/coffee/CoffeShopApplication.java" afterPath="$PROJECT_DIR$/src/main/java/edu/mum/coffee/CoffeShopApplication.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/mum/coffee/DTO/OrderDTO.java" afterPath="$PROJECT_DIR$/src/main/java/edu/mum/coffee/DTO/OrderDTO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/mum/coffee/DTO/OrderLineDTO.java" afterPath="$PROJECT_DIR$/src/main/java/edu/mum/coffee/DTO/OrderLineDTO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/mum/coffee/ViewController/ProductViewController.java" afterPath="$PROJECT_DIR$/src/main/java/edu/mum/coffee/ViewController/ProductViewController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/mum/coffee/ViewController/RegistrationViewController.java" afterPath="$PROJECT_DIR$/src/main/java/edu/mum/coffee/ViewController/RegistrationViewController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/mum/coffee/config/WebSecurityConfig.java" afterPath="$PROJECT_DIR$/src/main/java/edu/mum/coffee/config/WebSecurityConfig.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/mum/coffee/controller/HomeController.java" afterPath="$PROJECT_DIR$/src/main/java/edu/mum/coffee/controller/HomeController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/mum/coffee/controller/OrderController.java" afterPath="$PROJECT_DIR$/src/main/java/edu/mum/coffee/controller/OrderController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/mum/coffee/controller/PersonController.java" afterPath="$PROJECT_DIR$/src/main/java/edu/mum/coffee/controller/PersonController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/mum/coffee/controller/ProductController.java" afterPath="$PROJECT_DIR$/src/main/java/edu/mum/coffee/controller/ProductController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/mum/coffee/domain/Address.java" afterPath="$PROJECT_DIR$/src/main/java/edu/mum/coffee/domain/Address.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/mum/coffee/domain/Authority.java" afterPath="$PROJECT_DIR$/src/main/java/edu/mum/coffee/domain/Authority.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/mum/coffee/domain/Order.java" afterPath="$PROJECT_DIR$/src/main/java/edu/mum/coffee/domain/Order.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/mum/coffee/domain/Orderline.java" afterPath="$PROJECT_DIR$/src/main/java/edu/mum/coffee/domain/Orderline.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/mum/coffee/domain/Person.java" afterPath="$PROJECT_DIR$/src/main/java/edu/mum/coffee/domain/Person.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/mum/coffee/domain/Product.java" afterPath="$PROJECT_DIR$/src/main/java/edu/mum/coffee/domain/Product.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/mum/coffee/domain/ProductType.java" afterPath="$PROJECT_DIR$/src/main/java/edu/mum/coffee/domain/ProductType.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/mum/coffee/repository/OrderRepository.java" afterPath="$PROJECT_DIR$/src/main/java/edu/mum/coffee/repository/OrderRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/mum/coffee/repository/PersonRepository.java" afterPath="$PROJECT_DIR$/src/main/java/edu/mum/coffee/repository/PersonRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/mum/coffee/repository/ProductRepository.java" afterPath="$PROJECT_DIR$/src/main/java/edu/mum/coffee/repository/ProductRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/mum/coffee/service/OrderService.java" afterPath="$PROJECT_DIR$/src/main/java/edu/mum/coffee/service/OrderService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/mum/coffee/service/PersonService.java" afterPath="$PROJECT_DIR$/src/main/java/edu/mum/coffee/service/PersonService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/mum/coffee/service/ProductService.java" afterPath="$PROJECT_DIR$/src/main/java/edu/mum/coffee/service/ProductService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/application.properties" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/login.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/login.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/orderList.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/orderList.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/productList.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/productList.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/profileDetails.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/profileDetails.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/registrationForm.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/registrationForm.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/secure.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/secure.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/edu/mum/coffee/OrderServiceTest.java" afterPath="$PROJECT_DIR$/src/test/java/edu/mum/coffee/OrderServiceTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/edu/mum/coffee/PersonServiceTest.java" afterPath="$PROJECT_DIR$/src/test/java/edu/mum/coffee/PersonServiceTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/edu/mum/coffee/ProductServiceTest.java" afterPath="$PROJECT_DIR$/src/test/java/edu/mum/coffee/ProductServiceTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/templates/productList.html" afterPath="$PROJECT_DIR$/target/classes/templates/productList.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/application.properties" afterPath="$PROJECT_DIR$/target/classes/application.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/templates/index.html" afterPath="$PROJECT_DIR$/target/classes/templates/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/templates/secure.html" afterPath="$PROJECT_DIR$/target/classes/templates/secure.html" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -124,8 +105,8 @@
       <file leaf-file-name="PersonController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/edu/mum/coffee/controller/PersonController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="38" column="58" lean-forward="true" selection-start-line="38" selection-start-column="58" selection-end-line="38" selection-end-column="58" />
+            <state relative-caret-position="357">
+              <caret line="55" column="0" lean-forward="true" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -1198,7 +1179,7 @@
       <workItem from="1497908712186" duration="1367000" />
       <workItem from="1497955983420" duration="15988000" />
       <workItem from="1498048301505" duration="44579000" />
-      <workItem from="1498135287211" duration="13039000" />
+      <workItem from="1498135287211" duration="13160000" />
     </task>
     <task id="LOCAL-00001" summary="Project initialized with CRUD for product committed.">
       <created>1497888282205</created>
@@ -1228,7 +1209,14 @@
       <option name="project" value="LOCAL" />
       <updated>1498143201160</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Project completed.">
+      <created>1498153199019</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1498153199019</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1249,7 +1237,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="105382000" />
+    <option name="totallyTimeSpent" value="105503000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="807" extended-state="6" />
@@ -1300,7 +1288,8 @@
     <MESSAGE value="REST services added.&#10;Registration Added.&#10;Login Added.&#10;Product List Displayed.&#10;Edit profile added." />
     <MESSAGE value="Edit Profile page added." />
     <MESSAGE value="Orders added." />
-    <option name="LAST_COMMIT_MESSAGE" value="Orders added." />
+    <MESSAGE value="Project completed." />
+    <option name="LAST_COMMIT_MESSAGE" value="Project completed." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1859,8 +1848,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/edu/mum/coffee/controller/PersonController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="38" column="58" lean-forward="true" selection-start-line="38" selection-start-column="58" selection-end-line="38" selection-end-column="58" />
+        <state relative-caret-position="357">
+          <caret line="55" column="0" lean-forward="true" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
           <folding />
         </state>
       </provider>
