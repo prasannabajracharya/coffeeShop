@@ -35,7 +35,11 @@ public class Person {
 		return id;
 	}
 
-	public boolean isEnabled() {
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public boolean isEnabled() {
 		return enabled;
 	}
 

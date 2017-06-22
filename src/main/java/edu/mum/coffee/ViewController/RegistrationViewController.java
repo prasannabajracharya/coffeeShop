@@ -8,6 +8,7 @@ import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.validation.Valid;
@@ -34,14 +35,15 @@ public class RegistrationViewController {
             personService.savePerson(person);
             return "redirect:/login";
         }
-        return "register";
+        return "registrationForm";
     }
 
     @GetMapping("/profile")
     public String viewProfile(Model model, Principal principal){
         List<Person> personList = personService.findByEmail(principal.getName());
         model.addAttribute("user", personList.get(0));
-        System.out.println(personList.get(0));
-        return "profile";
+        return "profileDetails";
     }
+
+
 }
